@@ -1,0 +1,40 @@
+:root {
+  --gw-olive: #606c38;
+  --gw-forest: #283618;
+  --gw-cream: #fefae0;
+  --gw-sand: #dda15e;
+  --gw-rust: #bc6c25;
+
+  --bs-primary: var(--gw-olive);
+  --bs-secondary: var(--gw-rust);
+  --bs-body-bg: var(--gw-cream);
+  --bs-body-color: var(--gw-forest);
+  --bs-link-color: var(--gw-rust);
+  --bs-link-hover-color: var(--gw-olive);
+}
+
+body {
+  margin: 0;
+  background-color: var(--gw-cream);
+  color: var(--gw-forest);
+}
+
+.site-navbar {
+  background: linear-gradient(90deg, var(--gw-forest), var(--gw-olive));
+  border-bottom: 3px solid var(--gw-sand);
+}
+
+.site-brand,
+.site-navbar .nav-link {
+  color: var(--gw-cream) !important;
+}
+
+.site-navbar .nav-link.active,
+.site-navbar .nav-link:hover,
+.site-brand:hover {
+  color: var(--gw-sand) !important;
+}
+
+.site-main {
+  min-height: calc(100vh - 72px);
+}

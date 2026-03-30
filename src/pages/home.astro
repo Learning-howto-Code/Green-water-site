@@ -1,0 +1,307 @@
+---
+import Baselayout from '../layouts/base.astro';
+---
+<Baselayout title="Home">
+	<section class="hero">
+		<div class="hero-copy">
+			<p class="eyebrow">Built For Water-Stressed Cities</p>
+			<h1>Greywater hardware that cuts household water use by up to 45%.</h1>
+			<p class="lead">
+				Greenwater designs compact in-home units that collect shower and sink runoff,
+				filter it in real time, and route it to toilets and irrigation without changing
+				the way people live.
+			</p>
+			<div class="hero-actions">
+				<a class="btn btn-primary btn-lg" href="/contact">Request Pilot Install</a>
+				<a class="btn btn-outline-dark btn-lg" href="#product">See The Hardware</a>
+			</div>
+			<ul class="hero-metrics">
+				<li>
+					<strong>45%</strong>
+					<span>less potable water demand</span>
+				</li>
+				<li>
+					<strong>20 min</strong>
+					<span>average retrofit time</span>
+				</li>
+				<li>
+					<strong>3-stage</strong>
+					<span>closed-loop filtration</span>
+				</li>
+			</ul>
+		</div>
+		<aside class="hero-card" id="product">
+			<h2>Greenwater Core Unit</h2>
+			<p>Apartment-friendly module designed for multi-family retrofits and new builds.</p>
+			<dl>
+				<div>
+					<dt>Flow Throughput</dt>
+					<dd>95 L/min peak</dd>
+				</div>
+				<div>
+					<dt>Footprint</dt>
+					<dd>22in x 16in x 9in</dd>
+				</div>
+				<div>
+					<dt>Power Draw</dt>
+					<dd>42W average</dd>
+				</div>
+				<div>
+					<dt>Maintenance</dt>
+					<dd>Cartridge swap every 9 months</dd>
+				</div>
+			</dl>
+		</aside>
+	</section>
+
+	<section class="proof">
+		<article>
+			<h3>Smart diversion, not full replumbing</h3>
+			<p>
+				Our valve pack reads source quality and diverts only reclaimable greywater.
+				Blackwater lines remain untouched, reducing permitting friction.
+			</p>
+		</article>
+		<article>
+			<h3>State of the art AI</h3>
+			<p>
+				Best in class sensors and AI models ensure maximim water savings, and piece of mind
+			</p>
+		</article>
+		<article>
+			<h3>One of a kind insights</h3>
+			<p>
+				Water use, quality, and savings data allows homeownsers to understand and take into their own hands their water use
+			</p>
+		</article>
+	</section>
+
+	<section class="cta-band">
+		<div>
+			<p class="eyebrow">Now Booking 2026 Pilots</p>
+			<h2>Deploy Greenwater across your next building phase.</h2>
+		</div>
+		<a class="btn btn-dark btn-lg" href="/contact">Talk To The Team</a>
+	</section>
+
+	<style>
+		.hero {
+			display: grid;
+			grid-template-columns: 1.2fr 0.8fr;
+			gap: 2rem;
+			align-items: stretch;
+			margin-bottom: 2rem;
+		}
+
+		.hero-copy {
+			background:
+				radial-gradient(circle at 10% 0%, color-mix(in srgb, var(--gw-sand) 28%, transparent), transparent 55%),
+				radial-gradient(circle at 100% 80%, color-mix(in srgb, var(--gw-olive) 30%, transparent), transparent 45%),
+				var(--gw-cream);
+			border: 2px solid color-mix(in srgb, var(--gw-forest) 20%, transparent);
+			border-radius: 1.25rem;
+			padding: clamp(1.25rem, 4vw, 2.5rem);
+			box-shadow: 0 18px 36px rgba(40, 54, 24, 0.14);
+		}
+
+		.eyebrow {
+			margin: 0;
+			font-size: 0.78rem;
+			letter-spacing: 0.11em;
+			text-transform: uppercase;
+			color: var(--gw-rust);
+			font-weight: 700;
+		}
+
+		h1 {
+			margin-top: 0.65rem;
+			margin-bottom: 0.8rem;
+			font-size: clamp(2rem, 5vw, 3.2rem);
+			line-height: 1.08;
+			color: var(--gw-forest);
+			max-width: 20ch;
+		}
+
+		.lead {
+			margin: 0;
+			max-width: 58ch;
+			font-size: clamp(1rem, 2.1vw, 1.15rem);
+			color: color-mix(in srgb, var(--gw-forest) 85%, black);
+		}
+
+		.hero-actions {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.75rem;
+			margin-top: 1.35rem;
+		}
+
+		.hero-metrics {
+			margin: 1.6rem 0 0;
+			padding: 0;
+			list-style: none;
+			display: grid;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			gap: 0.75rem;
+		}
+
+		.hero-metrics li {
+			background: color-mix(in srgb, var(--gw-cream) 65%, white);
+			border: 1px solid color-mix(in srgb, var(--gw-sand) 45%, transparent);
+			border-radius: 0.85rem;
+			padding: 0.75rem;
+			display: flex;
+			flex-direction: column;
+			gap: 0.2rem;
+		}
+
+		.hero-metrics strong {
+			color: var(--gw-rust);
+			font-size: 1.15rem;
+			line-height: 1;
+		}
+
+		.hero-metrics span {
+			font-size: 0.86rem;
+			color: var(--gw-forest);
+		}
+
+		.hero-card {
+			background: linear-gradient(160deg, var(--gw-forest), color-mix(in srgb, var(--gw-forest) 68%, black));
+			color: var(--gw-cream);
+			border-radius: 1.25rem;
+			padding: clamp(1.25rem, 3.2vw, 2rem);
+			border: 2px solid color-mix(in srgb, var(--gw-sand) 28%, transparent);
+			box-shadow: 0 14px 30px rgba(40, 54, 24, 0.3);
+			animation: float-in 650ms ease-out both;
+		}
+
+		.hero-card h2 {
+			margin: 0;
+			font-size: clamp(1.4rem, 2.6vw, 1.85rem);
+		}
+
+		.hero-card p {
+			margin-top: 0.65rem;
+			margin-bottom: 1rem;
+			color: color-mix(in srgb, var(--gw-cream) 90%, white);
+		}
+
+		.hero-card dl {
+			margin: 0;
+			display: grid;
+			gap: 0.75rem;
+		}
+
+		.hero-card dl > div {
+			padding: 0.65rem;
+			border-radius: 0.6rem;
+			background: rgba(255, 255, 255, 0.08);
+			border: 1px solid rgba(255, 255, 255, 0.12);
+		}
+
+		.hero-card dt {
+			font-size: 0.78rem;
+			letter-spacing: 0.06em;
+			text-transform: uppercase;
+			opacity: 0.88;
+		}
+
+		.hero-card dd {
+			margin: 0.2rem 0 0;
+			font-size: 1rem;
+			font-weight: 700;
+		}
+
+		.proof {
+			display: grid;
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+			gap: 1rem;
+			margin-bottom: 2rem;
+		}
+
+		.proof article {
+			background: color-mix(in srgb, var(--gw-cream) 78%, white);
+			border: 1px solid color-mix(in srgb, var(--gw-olive) 24%, transparent);
+			border-radius: 1rem;
+			padding: 1.1rem;
+			transform: translateY(8px);
+			opacity: 0;
+			animation: rise 600ms ease forwards;
+		}
+
+		.proof article:nth-child(2) {
+			animation-delay: 120ms;
+		}
+
+		.proof article:nth-child(3) {
+			animation-delay: 240ms;
+		}
+
+		.proof h3 {
+			margin: 0;
+			font-size: 1.08rem;
+			color: var(--gw-forest);
+		}
+
+		.proof p {
+			margin: 0.5rem 0 0;
+			color: color-mix(in srgb, var(--gw-forest) 84%, black);
+		}
+
+		.cta-band {
+			background: linear-gradient(110deg, var(--gw-rust), var(--gw-sand));
+			color: #1d1306;
+			border-radius: 1.1rem;
+			padding: 1.1rem 1.2rem;
+			display: flex;
+			gap: 1rem;
+			justify-content: space-between;
+			align-items: center;
+			box-shadow: 0 10px 25px rgba(188, 108, 37, 0.26);
+		}
+
+		.cta-band h2 {
+			margin: 0.4rem 0 0;
+			font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+			max-width: 26ch;
+		}
+
+		@keyframes rise {
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+
+		@keyframes float-in {
+			from {
+				transform: translateY(14px);
+				opacity: 0;
+			}
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+
+		@media (max-width: 980px) {
+			.hero {
+				grid-template-columns: 1fr;
+			}
+
+			.proof {
+				grid-template-columns: 1fr;
+			}
+
+			.hero-metrics {
+				grid-template-columns: 1fr;
+			}
+
+			.cta-band {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+		}
+	</style>
+</Baselayout>

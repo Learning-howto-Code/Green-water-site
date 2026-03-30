@@ -1,0 +1,110 @@
+---
+import Baselayout from '../layouts/base.astro';
+---
+
+<Baselayout title="Contact">
+  <section class="contact-wrap">
+    <header>
+      <p class="eyebrow">Contact Greenwater</p>
+      <h1>Let us know about your project.</h1>
+      <p>
+        Share your email and a short message, and our team will follow up.
+      </p>
+    </header>
+
+    <form
+      class="contact-form"
+      action="https://formspree.io/f/xnjodkpv"
+      method="POST"
+    >
+      <label for="email">Your email</label>
+      <input
+        id="email"
+        type="email"
+        name="email"
+        placeholder="you@company.com"
+        autocomplete="email"
+        inputmode="email"
+        pattern="^[^\s@]+@[^\s@]+\.[^\s@]{2,}$"
+        title="Enter a valid email address, for example: you@company.com"
+        required
+      />
+
+      <label for="message">Your message</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="6"
+        placeholder="What's on your mind?"
+        required
+      ></textarea>
+
+      <button type="submit" class="btn btn-dark">Send</button>
+    </form>
+  </section>
+
+  <style>
+    .contact-wrap {
+      max-width: 760px;
+      margin: 1rem auto;
+      padding: clamp(1rem, 3vw, 1.75rem);
+      background: color-mix(in srgb, var(--gw-cream) 78%, white);
+      border: 1px solid color-mix(in srgb, var(--gw-olive) 25%, transparent);
+      border-radius: 1rem;
+      box-shadow: 0 12px 28px rgba(40, 54, 24, 0.12);
+    }
+
+    .eyebrow {
+      margin: 0;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gw-rust);
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0.5rem 0 0.6rem;
+      color: var(--gw-forest);
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+    }
+
+    .contact-wrap p {
+      margin: 0;
+      color: color-mix(in srgb, var(--gw-forest) 86%, black);
+    }
+
+    .contact-form {
+      margin-top: 1.25rem;
+      display: grid;
+      gap: 0.7rem;
+    }
+
+    .contact-form label {
+      font-weight: 700;
+      color: var(--gw-forest);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      border: 1px solid color-mix(in srgb, var(--gw-olive) 36%, transparent);
+      border-radius: 0.6rem;
+      padding: 0.7rem 0.8rem;
+      background: #fff;
+      color: var(--gw-forest);
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: 2px solid color-mix(in srgb, var(--gw-sand) 60%, transparent);
+      outline-offset: 1px;
+      border-color: var(--gw-sand);
+    }
+
+    .contact-form button {
+      justify-self: start;
+      margin-top: 0.4rem;
+    }
+  </style>
+</Baselayout>
