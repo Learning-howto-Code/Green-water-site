@@ -1,0 +1,81 @@
+---
+import Baselayout from '../layouts/base.astro';
+---
+
+<Baselayout title="Demo">
+	<section class="demo-wrap">
+		<p class="eyebrow">Product Demo</p>
+		<h1>System Architecture</h1>
+
+		<div class="video-slot" aria-label="Video placeholder">
+			<video controls preload="metadata" playsinline>
+				<source
+					src="https://cdn.hackclub.com/019d44ca-a694-74e6-803b-5107cbe8578b/Water%20Wise%20Mk.%201%20v12.mp4"
+					type="video/mp4"
+				/>
+				Your browser does not support the video tag.
+			</video>
+		</div>
+	</section>
+    	<section class="demo-wrap">
+		<!-- <p class="eyebrow">Product Demo</p> -->
+		<h1>AI in action</h1>
+
+		<div class="video-slot" aria-label="Video placeholder">
+			<video controls preload="metadata" playsinline>
+				<source
+					src="https://cdn.hackclub.com/019d3cf1-df73-7afb-a776-a0b14ffc0703/video.mp4"
+					type="video/mp4"
+				/>
+				Your browser does not support the video tag.
+			</video>
+		</div>
+	</section>
+
+	<style>
+
+	<style>
+		.demo-wrap {
+			max-width: 960px;
+			margin: 1rem auto;
+			padding: clamp(1rem, 3vw, 2rem);
+			background: color-mix(in srgb, var(--gw-cream) 80%, white);
+			border: 1px solid color-mix(in srgb, var(--gw-olive) 24%, transparent);
+			border-radius: 1rem;
+			box-shadow: 0 12px 28px rgba(40, 54, 24, 0.12);
+		}
+
+		.eyebrow {
+			margin: 0;
+			font-size: 0.78rem;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+			color: var(--gw-rust);
+			font-weight: 700;
+		}
+
+		h1 {
+			margin: 0.45rem 0 1rem;
+			color: var(--gw-forest);
+			font-size: clamp(1.8rem, 4vw, 2.4rem);
+		}
+
+		.video-slot {
+			width: 100%;
+			aspect-ratio: 16 / 9;
+			border-radius: 0.9rem;
+			border: 2px dashed color-mix(in srgb, var(--gw-sand) 48%, transparent);
+			overflow: hidden;
+			background:
+				radial-gradient(circle at 12% 0%, color-mix(in srgb, var(--gw-sand) 18%, transparent), transparent 52%),
+				linear-gradient(145deg, color-mix(in srgb, var(--gw-cream) 90%, white), color-mix(in srgb, var(--gw-cream) 74%, white));
+		}
+
+		.video-slot video {
+			width: 100%;
+			height: 100%;
+			display: block;
+			object-fit: cover;
+		}
+	</style>
+</Baselayout>

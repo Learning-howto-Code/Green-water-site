@@ -6,54 +6,32 @@ const baseUrl = import.meta.env.BASE_URL;
 <Baselayout title="Home">
 	<section class="hero">
 		<div class="hero-copy">
-			<p class="eyebrow">Built For Water-Stressed Cities</p>
-			<h1>Greywater hardware that cuts household water use by up to 45%.</h1>
+			<!-- <p class="eyebrow">Built for homeowners</p> -->
+			<h1>Water reclamation systems that cut your water use by up to 50%</h1>
 			<p class="lead">
-				Greenwater designs compact in-home units that collect shower and sink runoff,
-				filter it in real time, and route it to toilets and irrigation without changing
-				the way people live.
+				Greenwater is an all-in-one greywater reclamation device with the least intrusive
+				installation on the market, giving you peace of mind that your garden is getting the
+				water it needs, guilt-free.
 			</p>
 			<div class="hero-actions">
 				<a class="btn btn-primary btn-lg" href={`${baseUrl}contact/`}>Request Pilot Install</a>
-				<a class="btn btn-outline-dark btn-lg" href="#product">See The Hardware</a>
+				<a class="btn btn-outline-dark btn-lg" href={`${baseUrl}demo`}>See The Hardware</a>
 			</div>
 			<ul class="hero-metrics">
 				<li>
-					<strong>45%</strong>
-					<span>less potable water demand</span>
+					<strong>50%</strong>
+					<span>Reduction in indoor water use</span>
 				</li>
 				<li>
-					<strong>20 min</strong>
-					<span>average retrofit time</span>
+					<strong>25,000</strong>
+					<span>gallons saved annually</span>
 				</li>
 				<li>
 					<strong>3-stage</strong>
-					<span>closed-loop filtration</span>
+					<span>AI-powered filtration system</span>
 				</li>
 			</ul>
 		</div>
-		<aside class="hero-card" id="product">
-			<h2>Greenwater Core Unit</h2>
-			<p>Apartment-friendly module designed for multi-family retrofits and new builds.</p>
-			<dl>
-				<div>
-					<dt>Flow Throughput</dt>
-					<dd>95 L/min peak</dd>
-				</div>
-				<div>
-					<dt>Footprint</dt>
-					<dd>22in x 16in x 9in</dd>
-				</div>
-				<div>
-					<dt>Power Draw</dt>
-					<dd>42W average</dd>
-				</div>
-				<div>
-					<dt>Maintenance</dt>
-					<dd>Cartridge swap every 9 months</dd>
-				</div>
-			</dl>
-		</aside>
 	</section>
 
 	<section class="proof">
@@ -65,33 +43,61 @@ const baseUrl = import.meta.env.BASE_URL;
 			</p>
 		</article>
 		<article>
-			<h3>State of the art AI</h3>
+			<h3>State-of-the-art AI</h3>
 			<p>
-				Best in class sensors and AI models ensure maximim water savings, and piece of mind
+				Best-in-class sensors and AI models ensure maximum water savings and peace of mind.
 			</p>
 		</article>
 		<article>
-			<h3>One of a kind insights</h3>
+			<h3>One-of-a-kind insights</h3>
 			<p>
-				Water use, quality, and savings data allows homeownsers to understand and take into their own hands their water use
+				Water use, quality, and savings data allow homeowners to understand and take control
+				of their water use.
 			</p>
 		</article>
 	</section>
 
+	<section class="faq" aria-label="Frequently asked questions">
+		<p class="eyebrow">Q&A</p>
+		<h2>Common Questions</h2>
+
+		<details class="faq-item">
+			<summary>Can I trust it?</summary>
+			<p>
+				Greenwater is engineered with safety as the first concern. The water goes through multiple
+				filtration systems and is purified from microbial contaminants. Every system is built with
+				redundancies and tested far past what it will experience.
+			</p>
+		</details>
+
+		<details class="faq-item">
+			<summary>How much maintenance does it need?</summary>
+			<p>
+				Every part of the system is engineered for tens of thousands of duty cycles and
+				doesn't need any maintenance, ever.
+			</p>
+		</details>
+
+		<details class="faq-item">
+			<summary>Is the water safe for garden and landscape use?</summary>
+			<p>
+				Yes. Greywater has been proven safe for gardens, with no adverse effects found
+				compared to tap water.
+			</p>
+		</details>
+	</section>
+
 	<section class="cta-band">
 		<div>
-			<p class="eyebrow">Now Booking 2026 Pilots</p>
-			<h2>Deploy Greenwater across your next building phase.</h2>
+			<p class="eyebrow">Questions? Please reach out.</p>
+			<h2>Deploy Greenwater in your home</h2>
 		</div>
 		<a class="btn btn-dark btn-lg" href={`${baseUrl}contact/`}>Talk To The Team</a>
 	</section>
 
 	<style>
 		.hero {
-			display: grid;
-			grid-template-columns: 1.2fr 0.8fr;
-			gap: 2rem;
-			align-items: stretch;
+			display: block;
 			margin-bottom: 2rem;
 		}
 
@@ -168,53 +174,6 @@ const baseUrl = import.meta.env.BASE_URL;
 			color: var(--gw-forest);
 		}
 
-		.hero-card {
-			background: linear-gradient(160deg, var(--gw-forest), color-mix(in srgb, var(--gw-forest) 68%, black));
-			color: var(--gw-cream);
-			border-radius: 1.25rem;
-			padding: clamp(1.25rem, 3.2vw, 2rem);
-			border: 2px solid color-mix(in srgb, var(--gw-sand) 28%, transparent);
-			box-shadow: 0 14px 30px rgba(40, 54, 24, 0.3);
-			animation: float-in 650ms ease-out both;
-		}
-
-		.hero-card h2 {
-			margin: 0;
-			font-size: clamp(1.4rem, 2.6vw, 1.85rem);
-		}
-
-		.hero-card p {
-			margin-top: 0.65rem;
-			margin-bottom: 1rem;
-			color: color-mix(in srgb, var(--gw-cream) 90%, white);
-		}
-
-		.hero-card dl {
-			margin: 0;
-			display: grid;
-			gap: 0.75rem;
-		}
-
-		.hero-card dl > div {
-			padding: 0.65rem;
-			border-radius: 0.6rem;
-			background: rgba(255, 255, 255, 0.08);
-			border: 1px solid rgba(255, 255, 255, 0.12);
-		}
-
-		.hero-card dt {
-			font-size: 0.78rem;
-			letter-spacing: 0.06em;
-			text-transform: uppercase;
-			opacity: 0.88;
-		}
-
-		.hero-card dd {
-			margin: 0.2rem 0 0;
-			font-size: 1rem;
-			font-weight: 700;
-		}
-
 		.proof {
 			display: grid;
 			grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -251,6 +210,43 @@ const baseUrl = import.meta.env.BASE_URL;
 			color: color-mix(in srgb, var(--gw-forest) 84%, black);
 		}
 
+		.faq {
+			margin-bottom: 2rem;
+			padding: 1.25rem;
+			border-radius: 1rem;
+			background: color-mix(in srgb, var(--gw-cream) 80%, white);
+			border: 1px solid color-mix(in srgb, var(--gw-olive) 24%, transparent);
+			box-shadow: 0 12px 24px rgba(40, 54, 24, 0.1);
+		}
+
+		.faq h2 {
+			margin: 0.4rem 0 1rem;
+			font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+			color: var(--gw-forest);
+		}
+
+		.faq-item {
+			border: 1px solid color-mix(in srgb, var(--gw-sand) 36%, transparent);
+			background: color-mix(in srgb, var(--gw-cream) 92%, white);
+			border-radius: 0.7rem;
+			padding: 0.7rem 0.85rem;
+		}
+
+		.faq-item + .faq-item {
+			margin-top: 0.7rem;
+		}
+
+		.faq-item summary {
+			cursor: pointer;
+			font-weight: 700;
+			color: var(--gw-forest);
+		}
+
+		.faq-item p {
+			margin: 0.55rem 0 0;
+			color: color-mix(in srgb, var(--gw-forest) 84%, black);
+		}
+
 		.cta-band {
 			background: linear-gradient(110deg, var(--gw-rust), var(--gw-sand));
 			color: #1d1306;
@@ -269,6 +265,13 @@ const baseUrl = import.meta.env.BASE_URL;
 			max-width: 26ch;
 		}
 
+		.cta-band .eyebrow {
+			color: #2b1b08;
+			font-size: 0.95rem;
+			letter-spacing: 0.03em;
+			text-transform: none;
+		}
+
 		@keyframes rise {
 			to {
 				transform: translateY(0);
@@ -276,22 +279,7 @@ const baseUrl = import.meta.env.BASE_URL;
 			}
 		}
 
-		@keyframes float-in {
-			from {
-				transform: translateY(14px);
-				opacity: 0;
-			}
-			to {
-				transform: translateY(0);
-				opacity: 1;
-			}
-		}
-
 		@media (max-width: 980px) {
-			.hero {
-				grid-template-columns: 1fr;
-			}
-
 			.proof {
 				grid-template-columns: 1fr;
 			}

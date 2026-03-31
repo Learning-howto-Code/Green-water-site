@@ -22,6 +22,9 @@ body {
 .site-navbar {
   background: linear-gradient(90deg, var(--gw-forest), var(--gw-olive));
   border-bottom: 3px solid var(--gw-sand);
+  position: sticky;
+  top: 0;
+  z-index: 1030;
 }
 
 .site-brand,
