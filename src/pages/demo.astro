@@ -33,11 +33,9 @@ import Baselayout from '../layouts/base.astro';
 	</section>
 
 	<style>
-
-	<style>
 		.demo-wrap {
 			max-width: 960px;
-			margin: 1rem auto;
+			margin: 6rem auto 1rem;
 			padding: clamp(1rem, 3vw, 2rem);
 			background: color-mix(in srgb, var(--gw-cream) 80%, white);
 			border: 1px solid color-mix(in srgb, var(--gw-olive) 24%, transparent);
@@ -54,7 +52,12 @@ import Baselayout from '../layouts/base.astro';
 			font-weight: 700;
 		}
 
+		.demo-wrap + .demo-wrap {
+			margin-top: 1rem;
+		}
+
 		h1 {
+			font-family: 'DM Serif Display', serif;
 			margin: 0.45rem 0 1rem;
 			color: var(--gw-forest);
 			font-size: clamp(1.8rem, 4vw, 2.4rem);

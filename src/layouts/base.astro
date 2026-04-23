@@ -1,42 +1,57 @@
 ---
-import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/global.css";
 
+const { title } = Astro.props;
 const baseUrl = import.meta.env.BASE_URL;
+const hasHead = Astro.slots.has("head");
+const defaultTitle = title ? `Greenwater | ${title}` : "Greenwater";
 ---
-<nav class="navbar navbar-expand-lg site-navbar">
-  <div class="container-fluid">
-    <a class="navbar-brand site-brand" href={baseUrl}>Greenwater</a>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    {!hasHead && <title>{defaultTitle}</title>}
+    <slot name="head" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
 
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <nav class="site-nav" id="site-nav">
+      <a class="site-brand" href={baseUrl}>
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <circle cx="14" cy="14" r="12" stroke="currentColor" stroke-width="2"/>
+          <path d="M14 6 C10 12, 10 18, 14 22 C18 18, 18 12, 14 6Z" fill="#5a7247" opacity="0.6"/>
+        </svg>
+        Greenwater
+      </a>
+      <div class="nav-links">
+        <a href="/#how">How It Works</a>
+        <a href="/#faq">FAQ</a>
+        <a href={`${baseUrl}contact/`} class="nav-cta">Request Install</a>
+      </div>
+    </nav>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href={`${baseUrl}team/`}>Team</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href={`${baseUrl}contact/`}>Contact Us</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <main>
+      <slot />
+    </main>
 
-<main class="container py-4 site-main">
-  <slot />
-</main>
+    <footer class="site-footer">
+      <span>© 2026 Greenwater</span>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href={`${baseUrl}contact/`}>Contact</a>
+      </div>
+    </footer>
 
-<script>
-  import "bootstrap/dist/js/bootstrap.bundle.min.js";
-</script>
+    <script>
+      const nav = document.getElementById('site-nav');
+      window.addEventListener('scroll', () => {
+        nav?.classList.toggle('scrolled', window.scrollY > 50);
+      }, { passive: true });
+    </script>
+  </body>
+</html>

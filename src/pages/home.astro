@@ -4,294 +4,457 @@ import Baselayout from '../layouts/base.astro';
 const baseUrl = import.meta.env.BASE_URL;
 ---
 <Baselayout title="Home">
+	<title slot="head">Greenwater | Home Greywater Recycling System – Save 25,000 Gallons/Year</title>
+	<meta
+		slot="head"
+		name="description"
+		content="Greenwater's AI-powered greywater reclamation system diverts shower and sink water to your garden — saving up to 50% of indoor water use with no full replumbing required."
+	>
+	<meta slot="head" property="og:title" content="Greenwater | Home Greywater Recycling System" />
+	<meta
+		slot="head"
+		property="og:description"
+		content="AI-powered greywater reclamation that saves up to 25,000 gallons/year — with the least intrusive installation on the market."
+	/>
+	<meta slot="head" property="og:image" content="https://waterwz.com/images/greenwater-og-image.jpg" />
+	<meta slot="head" property="og:url" content="https://waterwz.com/" />
+	<meta slot="head" property="og:type" content="website" />
+	<meta slot="head" name="twitter:card" content="summary_large_image" />
+	<meta slot="head" name="twitter:title" content="Greenwater | Home Greywater Recycling System" />
+	<meta slot="head" name="twitter:description" content="Save up to 50% of indoor water use with Greenwater's smart greywater system." />
+	<meta slot="head" name="twitter:image" content="https://waterwz.com/images/greenwater-og-image.jpg" />
+
+	<!-- HERO -->
 	<section class="hero">
-		<div class="hero-copy">
-			<!-- <p class="eyebrow">Built for homeowners</p> -->
-			<h1>Water reclamation systems that cut your water use by up to 50%</h1>
+		<div class="hero-circles" aria-hidden="true">
+			<div class="circle circle-1"></div>
+			<div class="circle circle-2"></div>
+		</div>
+		<div class="hero-content">
+			<p class="eyebrow">Home greywater reclamation</p>
+			<h1>Cut your water use in half.</h1>
 			<p class="lead">
-				Greenwater is an all-in-one greywater reclamation device with the least intrusive
-				installation on the market, giving you peace of mind that your garden is getting the
-				water it needs, guilt-free.
+				Greenwater diverts shower and sink water back to your garden —
+				no full replumbing, no maintenance, no guilt. Just 25,000 gallons saved every year.
 			</p>
 			<div class="hero-actions">
-				<a class="btn btn-primary btn-lg" href={`${baseUrl}contact/`}>Request Pilot Install</a>
-				<a class="btn btn-outline-dark btn-lg" href={`${baseUrl}demo`}>See The Hardware</a>
+				<a class="btn-primary" href={`${baseUrl}contact/`}>Request Pilot Install</a>
+				<a class="btn-outline" href={`${baseUrl}demo/`}>See The Hardware →</a>
 			</div>
-			<ul class="hero-metrics">
-				<li>
-					<strong>50%</strong>
-					<span>Reduction in indoor water use</span>
-				</li>
-				<li>
-					<strong>25,000</strong>
-					<span>gallons saved annually</span>
-				</li>
-				<li>
-					<strong>3-stage</strong>
-					<span>AI-powered filtration system</span>
-				</li>
-			</ul>
 		</div>
 	</section>
 
-	<section class="proof">
-		<article>
-			<h3>Smart diversion, not full replumbing</h3>
-			<p>
-				Our valve pack reads source quality and diverts only reclaimable greywater.
-				Blackwater lines remain untouched, reducing permitting friction.
-			</p>
-		</article>
-		<article>
-			<h3>State-of-the-art AI</h3>
-			<p>
-				Best-in-class sensors and AI models ensure maximum water savings and peace of mind.
-			</p>
-		</article>
-		<article>
-			<h3>One-of-a-kind insights</h3>
-			<p>
-				Water use, quality, and savings data allow homeowners to understand and take control
-				of their water use.
-			</p>
-		</article>
+	<!-- HOW IT WORKS -->
+	<section id="how" class="how-section">
+		<p class="eyebrow">How it works</p>
+		<h2>Smart diversion,<br/>not full replumbing.</h2>
+		<div class="steps">
+			<div class="step">
+				<span class="step-num">01</span>
+				<h3>Intelligent Diversion</h3>
+				<p>Our valve pack reads source quality in real-time and diverts only reclaimable greywater. Blackwater lines stay untouched — reducing permitting friction to near zero.</p>
+			</div>
+			<div class="step">
+				<span class="step-num">02</span>
+				<h3>3-Stage Filtration</h3>
+				<p>Sensor-driven AI models continuously optimize a three-stage filtration process, ensuring every drop meets quality thresholds before reaching your garden.</p>
+			</div>
+			<div class="step">
+				<span class="step-num">03</span>
+				<h3>Live Insights</h3>
+				<p>Water use, quality, and savings data at your fingertips. Understand exactly where your water goes and how much you're saving, updated in real-time.</p>
+			</div>
+		</div>
 	</section>
 
-	<section class="faq" aria-label="Frequently asked questions">
-		<p class="eyebrow">Q&A</p>
-		<h2>Common Questions</h2>
-
-		<details class="faq-item">
-			<summary>Can I trust it?</summary>
-			<p>
-				Greenwater is engineered with safety as the first concern. The water goes through multiple
-				filtration systems and is purified from microbial contaminants. Every system is built with
-				redundancies and tested far past what it will experience.
-			</p>
-		</details>
-
-		<details class="faq-item">
-			<summary>How much maintenance does it need?</summary>
-			<p>
-				Every part of the system is engineered for tens of thousands of duty cycles and
-				doesn't need any maintenance, ever.
-			</p>
-		</details>
-
-		<details class="faq-item">
-			<summary>Is the water safe for garden and landscape use?</summary>
-			<p>
-				Yes. Greywater has been proven safe for gardens, with no adverse effects found
-				compared to tap water.
-			</p>
-		</details>
+	<!-- FAQ -->
+	<section id="faq" class="faq-section">
+		<p class="eyebrow">FAQ</p>
+		<h2>Common questions</h2>
+		<div class="faq-list">
+			<div class="faq-item">
+				<button class="faq-btn" aria-expanded="false">
+					Can I trust it?
+					<span class="faq-icon" aria-hidden="true">+</span>
+				</button>
+				<div class="faq-body">
+					<p>Greenwater is engineered with safety as the first concern. Water passes through multiple filtration systems and is purified from microbial contaminants. Every system is built with redundancies and tested far beyond normal operating conditions.</p>
+				</div>
+			</div>
+			<div class="faq-item">
+				<button class="faq-btn" aria-expanded="false">
+					How much maintenance does it need?
+					<span class="faq-icon" aria-hidden="true">+</span>
+				</button>
+				<div class="faq-body">
+					<p>Every component is engineered for tens of thousands of duty cycles. The system doesn't need any maintenance — ever.</p>
+				</div>
+			</div>
+			<div class="faq-item">
+				<button class="faq-btn" aria-expanded="false">
+					Is the water safe for garden use?
+					<span class="faq-icon" aria-hidden="true">+</span>
+				</button>
+				<div class="faq-body">
+					<p>Yes. Greywater has been proven safe for gardens, with no adverse effects compared to tap water. Our filtration exceeds regulatory requirements.</p>
+				</div>
+			</div>
+			<div class="faq-item">
+				<button class="faq-btn" aria-expanded="false">
+					How long does installation take?
+					<span class="faq-icon" aria-hidden="true">+</span>
+				</button>
+				<div class="faq-body">
+					<p>A typical install takes less than a day. We connect to existing drain lines without modifying your plumbing stack — no permits required in most jurisdictions.</p>
+				</div>
+			</div>
+		</div>
 	</section>
 
-	<section class="cta-band">
-		<div>
-			<p class="eyebrow">Questions? Please reach out.</p>
+	<!-- CTA -->
+	<section class="cta-section">
+		<div class="cta-bg" aria-hidden="true"></div>
+		<div class="cta-content">
 			<h2>Deploy Greenwater in your home</h2>
+			<p>Join our pilot program — limited spots available.</p>
+			<a href={`${baseUrl}contact/`} class="btn-accent">Talk To The Team</a>
 		</div>
-		<a class="btn btn-dark btn-lg" href={`${baseUrl}contact/`}>Talk To The Team</a>
 	</section>
 
 	<style>
-		.hero {
-			display: block;
-			margin-bottom: 2rem;
-		}
-
-		.hero-copy {
-			background:
-				radial-gradient(circle at 10% 0%, color-mix(in srgb, var(--gw-sand) 28%, transparent), transparent 55%),
-				radial-gradient(circle at 100% 80%, color-mix(in srgb, var(--gw-olive) 30%, transparent), transparent 45%),
-				var(--gw-cream);
-			border: 2px solid color-mix(in srgb, var(--gw-forest) 20%, transparent);
-			border-radius: 1.25rem;
-			padding: clamp(1.25rem, 4vw, 2.5rem);
-			box-shadow: 0 18px 36px rgba(40, 54, 24, 0.14);
-		}
-
 		.eyebrow {
-			margin: 0;
-			font-size: 0.78rem;
-			letter-spacing: 0.11em;
+			font-size: 0.8rem;
+			letter-spacing: 0.15em;
 			text-transform: uppercase;
 			color: var(--gw-rust);
 			font-weight: 700;
+			margin: 0 0 1.5rem;
 		}
 
-		h1 {
-			margin-top: 0.65rem;
-			margin-bottom: 0.8rem;
-			font-size: clamp(2rem, 5vw, 3.2rem);
-			line-height: 1.08;
+		/* HERO */
+		.hero {
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 8rem 2.5rem 4rem;
+			position: relative;
+		}
+
+		.hero-circles {
+			position: absolute;
+			inset: 0;
+			overflow: hidden;
+			pointer-events: none;
+		}
+
+		.circle {
+			position: absolute;
+			border-radius: 50%;
+		}
+
+		.circle-1 {
+			top: 10%;
+			right: -8%;
+			width: 50vw;
+			height: 50vw;
+			border: 1px solid rgba(90, 114, 71, 0.12);
+			animation: float1 8s ease-in-out infinite;
+		}
+
+		.circle-2 {
+			top: 18%;
+			right: -2%;
+			width: 35vw;
+			height: 35vw;
+			background: rgba(90, 114, 71, 0.04);
+			animation: float2 10s ease-in-out infinite;
+		}
+
+		@keyframes float1 {
+			0%, 100% { transform: translate(0, 0); }
+			50% { transform: translate(-12px, 18px); }
+		}
+
+		@keyframes float2 {
+			0%, 100% { transform: translate(0, 0); }
+			50% { transform: translate(8px, -14px); }
+		}
+
+		.hero-content {
+			max-width: 1200px;
+			margin: 0 auto;
+			width: 100%;
+			position: relative;
+		}
+
+		.hero-content h1 {
+			font-family: 'DM Serif Display', serif;
+			font-size: clamp(2.5rem, 6vw, 6.6rem);
+			line-height: 1.05;
 			color: var(--gw-forest);
-			max-width: 20ch;
+			max-width: 16ch;
+			margin: 0 0 2rem;
 		}
 
 		.lead {
-			margin: 0;
-			max-width: 58ch;
-			font-size: clamp(1rem, 2.1vw, 1.15rem);
-			color: color-mix(in srgb, var(--gw-forest) 85%, black);
+			font-size: 1.2rem;
+			line-height: 1.65;
+			color: var(--gw-text-muted);
+			max-width: 48ch;
+			margin: 0 0 2.5rem;
 		}
 
 		.hero-actions {
 			display: flex;
-			flex-wrap: wrap;
-			gap: 0.75rem;
-			margin-top: 1.35rem;
-		}
-
-		.hero-metrics {
-			margin: 1.6rem 0 0;
-			padding: 0;
-			list-style: none;
-			display: grid;
-			grid-template-columns: repeat(3, minmax(0, 1fr));
-			gap: 0.75rem;
-		}
-
-		.hero-metrics li {
-			background: color-mix(in srgb, var(--gw-cream) 65%, white);
-			border: 1px solid color-mix(in srgb, var(--gw-sand) 45%, transparent);
-			border-radius: 0.85rem;
-			padding: 0.75rem;
-			display: flex;
-			flex-direction: column;
-			gap: 0.2rem;
-		}
-
-		.hero-metrics strong {
-			color: var(--gw-rust);
-			font-size: 1.15rem;
-			line-height: 1;
-		}
-
-		.hero-metrics span {
-			font-size: 0.86rem;
-			color: var(--gw-forest);
-		}
-
-		.proof {
-			display: grid;
-			grid-template-columns: repeat(3, minmax(0, 1fr));
 			gap: 1rem;
-			margin-bottom: 2rem;
+			flex-wrap: wrap;
 		}
 
-		.proof article {
-			background: color-mix(in srgb, var(--gw-cream) 78%, white);
-			border: 1px solid color-mix(in srgb, var(--gw-olive) 24%, transparent);
-			border-radius: 1rem;
-			padding: 1.1rem;
-			transform: translateY(8px);
-			opacity: 0;
-			animation: rise 600ms ease forwards;
+		.btn-primary {
+			text-decoration: none;
+			background: var(--gw-rust);
+			color: #fff;
+			padding: 1rem 2rem;
+			border-radius: 100px;
+			font-size: 1rem;
+			font-weight: 600;
+			display: inline-block;
+			transition: transform 0.25s, box-shadow 0.25s;
 		}
 
-		.proof article:nth-child(2) {
-			animation-delay: 120ms;
+		.btn-primary:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 8px 24px rgba(196, 96, 58, 0.3);
+			color: #fff;
 		}
 
-		.proof article:nth-child(3) {
-			animation-delay: 240ms;
+		.btn-outline {
+			text-decoration: none;
+			color: var(--gw-forest);
+			padding: 1rem 2rem;
+			border-radius: 100px;
+			font-size: 1rem;
+			font-weight: 600;
+			border: 1.5px solid var(--gw-forest);
+			display: inline-block;
+			transition: background 0.25s, color 0.25s;
 		}
 
-		.proof h3 {
+		.btn-outline:hover {
+			background: var(--gw-forest);
+			color: #fff;
+		}
+
+		/* HOW IT WORKS */
+		.how-section {
+			max-width: 1200px;
+			margin: 0 auto 8rem;
+			padding: 0 2.5rem;
+		}
+
+		.how-section h2 {
+			font-family: 'DM Serif Display', serif;
+			font-size: clamp(2rem, 3.5vw, 3rem);
+			line-height: 1.1;
+			color: var(--gw-forest);
+			max-width: 20ch;
+			margin: 0 0 4rem;
+		}
+
+		.steps {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 2rem;
+		}
+
+		.step {
+			padding: 2rem 0;
+			border-top: 2px solid var(--gw-forest);
+		}
+
+		.step-num {
+			font-family: 'DM Serif Display', serif;
+			font-size: 3rem;
+			color: rgba(26, 46, 26, 0.08);
+			line-height: 1;
+			display: block;
+			margin-bottom: 1rem;
+		}
+
+		.step h3 {
+			font-size: 1.15rem;
+			font-weight: 700;
+			margin: 0 0 0.75rem;
+			color: var(--gw-forest);
+		}
+
+		.step p {
+			font-size: 0.95rem;
+			line-height: 1.7;
+			color: var(--gw-text-muted);
 			margin: 0;
-			font-size: 1.08rem;
+		}
+
+		/* FAQ */
+		.faq-section {
+			max-width: 720px;
+			margin: 0 auto 8rem;
+			padding: 0 2.5rem;
+		}
+
+		.faq-section h2 {
+			font-family: 'DM Serif Display', serif;
+			font-size: clamp(1.8rem, 3vw, 2.5rem);
+			line-height: 1.1;
 			color: var(--gw-forest);
-		}
-
-		.proof p {
-			margin: 0.5rem 0 0;
-			color: color-mix(in srgb, var(--gw-forest) 84%, black);
-		}
-
-		.faq {
-			margin-bottom: 2rem;
-			padding: 1.25rem;
-			border-radius: 1rem;
-			background: color-mix(in srgb, var(--gw-cream) 80%, white);
-			border: 1px solid color-mix(in srgb, var(--gw-olive) 24%, transparent);
-			box-shadow: 0 12px 24px rgba(40, 54, 24, 0.1);
-		}
-
-		.faq h2 {
-			margin: 0.4rem 0 1rem;
-			font-size: clamp(1.3rem, 2.2vw, 1.8rem);
-			color: var(--gw-forest);
+			margin: 0 0 3rem;
 		}
 
 		.faq-item {
-			border: 1px solid color-mix(in srgb, var(--gw-sand) 36%, transparent);
-			background: color-mix(in srgb, var(--gw-cream) 92%, white);
-			border-radius: 0.7rem;
-			padding: 0.7rem 0.85rem;
+			border-bottom: 1px solid rgba(26, 46, 26, 0.1);
 		}
 
-		.faq-item + .faq-item {
-			margin-top: 0.7rem;
-		}
-
-		.faq-item summary {
+		.faq-btn {
+			background: none;
+			border: none;
 			cursor: pointer;
-			font-weight: 700;
-			color: var(--gw-forest);
-		}
-
-		.faq-item p {
-			margin: 0.55rem 0 0;
-			color: color-mix(in srgb, var(--gw-forest) 84%, black);
-		}
-
-		.cta-band {
-			background: linear-gradient(110deg, var(--gw-forest), var(--gw-olive));
-			color: #ffffff;
-			border-radius: 1.1rem;
-			padding: 1.1rem 1.2rem;
+			width: 100%;
 			display: flex;
-			gap: 1rem;
 			justify-content: space-between;
 			align-items: center;
-			box-shadow: 0 10px 25px rgba(40, 54, 24, 0.26);
+			font-family: 'DM Sans', sans-serif;
+			font-size: 1.1rem;
+			font-weight: 600;
+			color: var(--gw-forest);
+			text-align: left;
+			padding: 1.5rem 0;
 		}
 
-		.cta-band h2 {
-			margin: 0.4rem 0 0;
-			font-size: clamp(1.25rem, 2.2vw, 1.75rem);
-			max-width: 26ch;
-		}
-
-		.cta-band .eyebrow {
+		.faq-icon {
+			transition: transform 0.3s ease;
+			font-size: 1.4rem;
+			font-weight: 300;
 			color: var(--gw-rust);
+			flex-shrink: 0;
+			margin-left: 1rem;
+			line-height: 1;
+			display: inline-block;
+		}
+
+		.faq-item.open .faq-icon {
+			transform: rotate(45deg);
+		}
+
+		.faq-body {
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.4s ease, opacity 0.3s ease;
+			opacity: 0;
+		}
+
+		.faq-item.open .faq-body {
+			max-height: 300px;
+			opacity: 1;
+		}
+
+		.faq-body p {
+			padding-bottom: 1.5rem;
 			font-size: 0.95rem;
-			letter-spacing: 0.03em;
-			text-transform: none;
+			line-height: 1.7;
+			color: var(--gw-text-muted);
+			margin: 0;
 		}
 
-		@keyframes rise {
-			to {
-				transform: translateY(0);
-				opacity: 1;
+		/* CTA */
+		.cta-section {
+			margin: 0 2.5rem 4rem;
+			padding: clamp(3rem, 6vw, 5rem);
+			background: var(--gw-forest);
+			border-radius: 1.5rem;
+			position: relative;
+			overflow: hidden;
+			text-align: center;
+		}
+
+		.cta-bg {
+			position: absolute;
+			inset: 0;
+			background:
+				radial-gradient(circle at 30% 50%, rgba(90, 114, 71, 0.3), transparent 60%),
+				radial-gradient(circle at 80% 20%, rgba(196, 96, 58, 0.15), transparent 50%);
+			pointer-events: none;
+		}
+
+		.cta-content {
+			position: relative;
+		}
+
+		.cta-content h2 {
+			font-family: 'DM Serif Display', serif;
+			font-size: clamp(2rem, 4vw, 3.2rem);
+			line-height: 1.1;
+			color: #fff;
+			max-width: 18ch;
+			margin: 0 auto 1rem;
+		}
+
+		.cta-content p {
+			color: rgba(255, 255, 255, 0.6);
+			font-size: 1.1rem;
+			margin: 0 0 2rem;
+		}
+
+		.btn-accent {
+			text-decoration: none;
+			background: var(--gw-rust);
+			color: #fff;
+			padding: 1rem 2.5rem;
+			border-radius: 100px;
+			font-size: 1rem;
+			font-weight: 600;
+			display: inline-block;
+			transition: transform 0.25s, box-shadow 0.25s;
+		}
+
+		.btn-accent:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 8px 24px rgba(196, 96, 58, 0.3);
+			color: #fff;
+		}
+
+		@media (max-width: 768px) {
+			.hero {
+				padding: 7rem 1.25rem 3rem;
 			}
-		}
 
-		@media (max-width: 980px) {
-			.proof {
+			.steps {
 				grid-template-columns: 1fr;
 			}
 
-			.hero-metrics {
-				grid-template-columns: 1fr;
+			.how-section,
+			.faq-section {
+				padding: 0 1.25rem;
 			}
 
-			.cta-band {
-				flex-direction: column;
-				align-items: flex-start;
+			.cta-section {
+				margin: 0 1rem 3rem;
 			}
 		}
 	</style>
+
+	<script>
+		document.querySelectorAll('.faq-btn').forEach(btn => {
+			btn.addEventListener('click', () => {
+				const item = btn.closest('.faq-item');
+				const isOpen = item?.classList.contains('open');
+				document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('open'));
+				document.querySelectorAll('.faq-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+				if (!isOpen && item) {
+					item.classList.add('open');
+					btn.setAttribute('aria-expanded', 'true');
+				}
+			});
+		});
+	</script>
 </Baselayout>
