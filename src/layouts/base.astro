@@ -1,19 +1,61 @@
 ---
 import "../styles/global.css";
 
-const { title } = Astro.props;
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description = "Greenwater's AI-powered greywater reclamation system diverts shower and sink water to your garden — saving up to 50% of indoor water use with no full replumbing required.",
+  canonical,
+  ogImage = "https://waterwz.com/images/greenwater-og-image.jpg",
+  ogType = "website",
+  noindex = false,
+} = Astro.props;
+
+const siteUrl = "https://waterwz.com";
 const baseUrl = import.meta.env.BASE_URL;
-const hasHead = Astro.slots.has("head");
-const defaultTitle = title ? `Greenwater | ${title}` : "Greenwater";
+const pageTitle = title
+  ? `${title} | Greenwater`
+  : "Greenwater | Home Greywater Recycling System – Save 25,000 Gallons/Year";
+const canonicalUrl = canonical || `${siteUrl}${Astro.url.pathname}`;
 ---
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1a2e1a" />
+
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content="Greenwater" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-    {!hasHead && <title>{defaultTitle}</title>}
+
     <slot name="head" />
   </head>
   <body>

@@ -2,27 +2,67 @@
 import Baselayout from '../layouts/base.astro';
 
 const baseUrl = import.meta.env.BASE_URL;
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Greenwater",
+  "url": "https://waterwz.com",
+  "logo": "https://waterwz.com/favicon.svg",
+  "description": "AI-powered greywater reclamation systems that divert shower and sink water to your garden, saving up to 25,000 gallons per year.",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "url": "https://waterwz.com/contact/"
+  }
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I trust a greywater recycling system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Greenwater is engineered with safety as the first concern. Water passes through multiple filtration systems and is purified from microbial contaminants. Every system is built with redundancies and tested far beyond normal operating conditions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much maintenance does a greywater system need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every component is engineered for tens of thousands of duty cycles. The system doesn't need any maintenance — ever."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is recycled greywater safe for garden use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Greywater has been proven safe for gardens, with no adverse effects compared to tap water. Our filtration exceeds regulatory requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does greywater system installation take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A typical install takes less than a day. We connect to existing drain lines without modifying your plumbing stack — no permits required in most jurisdictions."
+      }
+    }
+  ]
+};
 ---
-<Baselayout title="Home">
-	<title slot="head">Greenwater | Home Greywater Recycling System – Save 25,000 Gallons/Year</title>
-	<meta
-		slot="head"
-		name="description"
-		content="Greenwater's AI-powered greywater reclamation system diverts shower and sink water to your garden — saving up to 50% of indoor water use with no full replumbing required."
-	>
-	<meta slot="head" property="og:title" content="Greenwater | Home Greywater Recycling System" />
-	<meta
-		slot="head"
-		property="og:description"
-		content="AI-powered greywater reclamation that saves up to 25,000 gallons/year — with the least intrusive installation on the market."
-	/>
-	<meta slot="head" property="og:image" content="https://waterwz.com/images/greenwater-og-image.jpg" />
-	<meta slot="head" property="og:url" content="https://waterwz.com/" />
-	<meta slot="head" property="og:type" content="website" />
-	<meta slot="head" name="twitter:card" content="summary_large_image" />
-	<meta slot="head" name="twitter:title" content="Greenwater | Home Greywater Recycling System" />
-	<meta slot="head" name="twitter:description" content="Save up to 50% of indoor water use with Greenwater's smart greywater system." />
-	<meta slot="head" name="twitter:image" content="https://waterwz.com/images/greenwater-og-image.jpg" />
+<Baselayout
+  title="Home Greywater Recycling System – Save 25,000 Gallons/Year"
+  description="Greenwater's AI-powered greywater reclamation system diverts shower and sink water to your garden — saving up to 50% of indoor water use with no full replumbing required."
+  canonical="https://waterwz.com/"
+>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
 	<!-- HERO -->
 	<section class="hero">
