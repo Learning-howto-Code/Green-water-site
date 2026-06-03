@@ -3,15 +3,16 @@ import Baselayout from '../layouts/base.astro';
 ---
 
 <Baselayout
-  title="Product Demo – See the System in Action"
-  description="Watch Greenwater's AI-powered greywater recycling hardware and filtration system in action. See how it installs in under a day with no full replumbing."
+  title="Product Demo – See the Gray Water System in Action"
+  description="Watch Greenwater's AI-powered gray water (greywater) recycling hardware and filtration system in action. See how it installs in under a day with no full replumbing."
   canonical="https://waterwz.com/demo/"
 >
 	<section class="demo-wrap">
 		<p class="eyebrow">Product Demo</p>
 		<h1>System Architecture</h1>
+		<p class="demo-desc">The Greenwater gray water system connects directly to your existing shower and sink drain lines. Our valve pack identifies reclaimable gray water in real-time, routes it through a three-stage filtration process, and delivers clean water to your garden — without touching black water lines or requiring full replumbing.</p>
 
-		<div class="video-slot" aria-label="Video placeholder">
+		<div class="video-slot" aria-label="Greenwater gray water system architecture walkthrough video">
 			<video controls preload="metadata" playsinline>
 				<source
 					src="https://cdn.hackclub.com/019d44ca-a694-74e6-803b-5107cbe8578b/Water%20Wise%20Mk.%201%20v12.mp4"
@@ -21,11 +22,11 @@ import Baselayout from '../layouts/base.astro';
 			</video>
 		</div>
 	</section>
-    	<section class="demo-wrap">
-		<!-- <p class="eyebrow">Product Demo</p> -->
+	<section class="demo-wrap">
 		<h1>AI in action</h1>
+		<p class="demo-desc">Greenwater's AI models run continuously on embedded sensors throughout the greywater system. The AI monitors water quality at every filtration stage, adjusting diversion valves and filtration parameters to ensure every drop meets safety thresholds before reaching your garden. No manual tuning required.</p>
 
-		<div class="video-slot" aria-label="Video placeholder">
+		<div class="video-slot" aria-label="Greenwater AI-driven greywater filtration system demonstration video">
 			<video controls preload="metadata" playsinline>
 				<source
 					src="https://cdn.hackclub.com/019d3cf1-df73-7afb-a776-a0b14ffc0703/video.mp4"
@@ -62,9 +63,17 @@ import Baselayout from '../layouts/base.astro';
 
 		h1 {
 			font-family: 'DM Serif Display', serif;
-			margin: 0.45rem 0 1rem;
+			margin: 0.45rem 0 0.75rem;
 			color: var(--gw-forest);
 			font-size: clamp(1.8rem, 4vw, 2.4rem);
+		}
+
+		.demo-desc {
+			font-size: 0.95rem;
+			line-height: 1.7;
+			color: var(--gw-text-muted);
+			margin: 0 0 1rem;
+			max-width: 68ch;
 		}
 
 		.video-slot {

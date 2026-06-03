@@ -12,9 +12,9 @@ interface Props {
 
 const {
   title,
-  description = "Greenwater's AI-powered greywater reclamation system diverts shower and sink water to your garden — saving up to 50% of indoor water use with no full replumbing required.",
+  description = "Greenwater's AI-powered gray water (greywater) reclamation system diverts shower and sink water to your garden — saving up to 50% of indoor water use with no full replumbing required.",
   canonical,
-  ogImage = "https://waterwz.com/images/greenwater-og-image.jpg",
+  ogImage = "https://waterwz.com/images/greenwater-og-image.svg",
   ogType = "website",
   noindex = false,
 } = Astro.props;
@@ -23,7 +23,7 @@ const siteUrl = "https://waterwz.com";
 const baseUrl = import.meta.env.BASE_URL;
 const pageTitle = title
   ? `${title} | Greenwater`
-  : "Greenwater | Home Greywater Recycling System – Save 25,000 Gallons/Year";
+  : "Greenwater | Home Gray Water Recycling System – Save 25,000 Gallons/Year";
 const canonicalUrl = canonical || `${siteUrl}${Astro.url.pathname}`;
 ---
 <html lang="en">
@@ -38,6 +38,7 @@ const canonicalUrl = canonical || `${siteUrl}${Astro.url.pathname}`;
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
     <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+    <meta name="keywords" content="gray water system, graywater recycling, greywater system, home gray water recycling, gray water for garden, greywater reclamation, water recycling system" />
 
     <!-- Open Graph -->
     <meta property="og:title" content={pageTitle} />
@@ -75,6 +76,7 @@ const canonicalUrl = canonical || `${siteUrl}${Astro.url.pathname}`;
       <div class="nav-links">
         <a href="/#how">How It Works</a>
         <a href="/#faq">FAQ</a>
+        <a href={`${baseUrl}resources/`}>Resources</a>
         <a href={`${baseUrl}contact/`} class="nav-cta">Request Install</a>
       </div>
     </nav>

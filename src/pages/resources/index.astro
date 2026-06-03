@@ -1,0 +1,192 @@
+---
+import Baselayout from '../../layouts/base.astro';
+
+const baseUrl = import.meta.env.BASE_URL;
+
+const articles = [
+  {
+    href: `${baseUrl}resources/what-is-gray-water-system/`,
+    title: "What Is a Gray Water System?",
+    desc: "A homeowner's guide to gray water recycling — how it works, what it diverts, and why it's different from rainwater harvesting.",
+  },
+  {
+    href: `${baseUrl}resources/gray-water-system-for-garden/`,
+    title: "Using Gray Water for Garden Irrigation: Is It Safe?",
+    desc: "Everything you need to know about irrigating with gray water — safety, filtration requirements, and which plants thrive on it.",
+  },
+  {
+    href: `${baseUrl}resources/gray-water-vs-rainwater-harvesting/`,
+    title: "Gray Water vs. Rainwater Harvesting: Which Saves More?",
+    desc: "A side-by-side comparison of the two most popular home water recycling approaches, with real numbers on annual savings.",
+  },
+  {
+    href: `${baseUrl}resources/gray-water-system-installation/`,
+    title: "Gray Water System Installation: What to Expect",
+    desc: "A step-by-step overview of how a gray water system gets installed — what happens on the day, what you need to prepare, and what changes afterward.",
+  },
+];
+---
+<Baselayout
+  title="Gray Water Resources – Guides & Articles"
+  description="Learn everything about gray water systems — how they work, safety, installation, and how they compare to other home water recycling options."
+  canonical="https://waterwz.com/resources/"
+>
+  <section class="resources-hero">
+    <p class="eyebrow">Gray Water Resources</p>
+    <h1>Learn about gray water recycling</h1>
+    <p class="lead">Guides and articles to help homeowners understand, evaluate, and install a gray water system.</p>
+  </section>
+
+  <section class="articles-grid">
+    {articles.map(a => (
+      <a class="article-card" href={a.href}>
+        <h2>{a.title}</h2>
+        <p>{a.desc}</p>
+        <span class="read-link">Read article →</span>
+      </a>
+    ))}
+  </section>
+
+  <section class="resources-cta">
+    <h2>Ready to install a gray water system?</h2>
+    <p>Join the Greenwater pilot program and have a system installed in your home.</p>
+    <a href={`${baseUrl}contact/`} class="btn-primary">Talk To The Team</a>
+  </section>
+
+  <style>
+    .eyebrow {
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gw-rust);
+      font-weight: 700;
+      margin: 0 0 1.5rem;
+    }
+
+    .resources-hero {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 8rem 2.5rem 4rem;
+    }
+
+    .resources-hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 1.1;
+      color: var(--gw-forest);
+      max-width: 20ch;
+      margin: 0 0 1.5rem;
+    }
+
+    .lead {
+      font-size: 1.15rem;
+      line-height: 1.65;
+      color: var(--gw-text-muted);
+      max-width: 52ch;
+      margin: 0;
+    }
+
+    .articles-grid {
+      max-width: 1200px;
+      margin: 0 auto 6rem;
+      padding: 0 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .article-card {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 2rem;
+      background: color-mix(in srgb, var(--gw-cream) 80%, white);
+      border: 1px solid color-mix(in srgb, var(--gw-olive) 20%, transparent);
+      border-radius: 1rem;
+      text-decoration: none;
+      transition: box-shadow 0.25s, transform 0.25s;
+    }
+
+    .article-card:hover {
+      box-shadow: 0 8px 24px rgba(26, 46, 26, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .article-card h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.3rem;
+      line-height: 1.25;
+      color: var(--gw-forest);
+      margin: 0;
+    }
+
+    .article-card p {
+      font-size: 0.9rem;
+      line-height: 1.65;
+      color: var(--gw-text-muted);
+      margin: 0;
+      flex: 1;
+    }
+
+    .read-link {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--gw-rust);
+    }
+
+    .resources-cta {
+      margin: 0 2.5rem 6rem;
+      padding: clamp(3rem, 6vw, 4rem);
+      background: var(--gw-forest);
+      border-radius: 1.5rem;
+      text-align: center;
+    }
+
+    .resources-cta h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      color: #fff;
+      margin: 0 auto 1rem;
+      max-width: 22ch;
+    }
+
+    .resources-cta p {
+      color: rgba(255,255,255,0.6);
+      font-size: 1.05rem;
+      margin: 0 0 2rem;
+    }
+
+    .btn-primary {
+      text-decoration: none;
+      background: var(--gw-rust);
+      color: #fff;
+      padding: 1rem 2rem;
+      border-radius: 100px;
+      font-size: 1rem;
+      font-weight: 600;
+      display: inline-block;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(196, 96, 58, 0.3);
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .resources-hero {
+        padding: 7rem 1.25rem 3rem;
+      }
+
+      .articles-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1.25rem;
+      }
+
+      .resources-cta {
+        margin: 0 1rem 4rem;
+      }
+    }
+  </style>
+</Baselayout>

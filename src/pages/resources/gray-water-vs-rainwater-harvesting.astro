@@ -1,0 +1,224 @@
+---
+import Baselayout from '../../layouts/base.astro';
+
+const baseUrl = import.meta.env.BASE_URL;
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Gray Water vs. Rainwater Harvesting: Which Saves More?",
+  "description": "Gray water systems and rainwater harvesting both reduce household water consumption, but they work differently. Compare the two approaches by cost, output, reliability, and installation complexity.",
+  "author": { "@type": "Organization", "name": "Greenwater" },
+  "publisher": { "@type": "Organization", "name": "Greenwater", "url": "https://waterwz.com" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://waterwz.com/resources/gray-water-vs-rainwater-harvesting/" }
+};
+---
+<Baselayout
+  title="Gray Water vs. Rainwater Harvesting: Which Saves More?"
+  description="Gray water systems and rainwater harvesting both reduce household water consumption, but they work differently. Compare the two approaches by cost, output, reliability, and installation complexity."
+  canonical="https://waterwz.com/resources/gray-water-vs-rainwater-harvesting/"
+>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+
+  <article class="article-wrap">
+    <header class="article-header">
+      <a class="back-link" href={`${baseUrl}resources/`}>← Resources</a>
+      <p class="eyebrow">Gray Water Guide</p>
+      <h1>Gray Water vs. Rainwater Harvesting: Which Saves More?</h1>
+      <p class="article-lead">Both approaches cut your reliance on municipal water, but they serve different climates, budgets, and use cases. Here's a direct comparison to help you decide — or combine both.</p>
+    </header>
+
+    <div class="article-body">
+      <h2>The core difference</h2>
+      <p>Gray water systems recycle water you've already used inside your home — from showers, sinks, and laundry. The supply is consistent because it depends on your household's daily routines, not the weather.</p>
+      <p>Rainwater harvesting collects precipitation from your roof into a storage tank for later use. The supply varies with your local climate — abundant in wet regions, unreliable in dry ones.</p>
+
+      <h2>Water output: which produces more?</h2>
+      <p>In most US households, gray water wins on volume. A family of four using showers and bathroom sinks generates 120–200 gallons of recyclable gray water per day — year-round, regardless of season. That's 40,000–70,000 gallons per year before accounting for what can realistically be filtered and used.</p>
+      <p>Rainwater harvesting output depends heavily on local rainfall, roof area, and tank size. In a moderate-rainfall city (around 40 inches/year) with a 1,500 sq ft roof, a well-designed system might collect 30,000–45,000 gallons annually — but collection is concentrated in rainy seasons, meaning you need a large tank to smooth supply through dry months.</p>
+      <p>In arid regions (Phoenix, Las Vegas, Los Angeles), rainwater harvesting may only produce 5,000–15,000 gallons annually — a fraction of what a gray water system delivers consistently.</p>
+
+      <h2>Installation complexity</h2>
+      <p><strong>Gray water systems</strong> connect to existing drain lines inside your home. A modern system like Greenwater installs in under a day without modifying your plumbing stack. No excavation, no large storage tanks, no permits required in most states.</p>
+      <p><strong>Rainwater harvesting</strong> requires gutters, downspouts, a storage cistern (often 500–5,000 gallons), filtration, and distribution piping. Larger systems require excavation for underground tanks, and most jurisdictions require permits. Installation typically takes 1–3 days and involves significant site preparation.</p>
+
+      <h2>Cost comparison</h2>
+      <p>Gray water system costs vary by complexity, but modern compact systems are significantly less expensive than rainwater harvesting infrastructure at equivalent output. The absence of large storage tanks and excavation is the primary driver of this gap.</p>
+      <p>Rainwater harvesting costs scale with tank size. A 1,000-gallon above-ground tank system might cost $2,000–$5,000 installed; underground cistern systems run significantly higher.</p>
+
+      <h2>Reliability</h2>
+      <p>Gray water supply is as reliable as your household's water use — which is effectively 365 days per year. Your morning shower produces recyclable water whether it rains or not.</p>
+      <p>Rainwater supply is seasonal and climate-dependent. In drought years, a rainwater harvesting system may produce a fraction of its typical output. This is why rainwater harvesting alone is rarely sufficient in water-stressed regions — the times you need supplemental water most are exactly when supply is lowest.</p>
+
+      <h2>Can you use both?</h2>
+      <p>Yes — and in high-water-use households or large gardens, combining both systems can make sense. Gray water handles the steady, year-round supply; rainwater harvesting supplements during wet seasons. The two systems use separate plumbing and don't interfere with each other.</p>
+      <p>If you're choosing only one to start, gray water makes more sense for most US households because of its year-round consistency, lower installation cost, and no dependence on climate conditions.</p>
+
+      <h2>Summary</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr><th></th><th>Gray Water System</th><th>Rainwater Harvesting</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Supply consistency</td><td>Year-round, daily</td><td>Seasonal, climate-dependent</td></tr>
+          <tr><td>Typical annual output</td><td>10,000–25,000 gal</td><td>5,000–45,000 gal (varies widely)</td></tr>
+          <tr><td>Installation time</td><td>Under 1 day</td><td>1–3+ days</td></tr>
+          <tr><td>Permit required?</td><td>Usually no</td><td>Often yes</td></tr>
+          <tr><td>Excavation needed?</td><td>No</td><td>Often yes (underground tanks)</td></tr>
+          <tr><td>Best for</td><td>Any region, consistent output</td><td>High-rainfall regions, large storage</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="article-cta">
+      <h2>Install a gray water system in your home</h2>
+      <p>Greenwater's pilot program makes it easy — installed in under a day, no full replumbing required.</p>
+      <a href={`${baseUrl}contact/`} class="btn-primary">Talk To The Team</a>
+    </div>
+  </article>
+
+  <style>
+    .article-wrap {
+      max-width: 760px;
+      margin: 6rem auto 4rem;
+      padding: 0 2.5rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--gw-rust);
+      text-decoration: none;
+      margin-bottom: 2rem;
+    }
+
+    .eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gw-rust);
+      font-weight: 700;
+      margin: 0 0 1rem;
+    }
+
+    .article-header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      color: var(--gw-forest);
+      margin: 0 0 1.5rem;
+    }
+
+    .article-lead {
+      font-size: 1.15rem;
+      line-height: 1.65;
+      color: var(--gw-text-muted);
+      margin: 0 0 3rem;
+      border-bottom: 1px solid rgba(26, 46, 26, 0.1);
+      padding-bottom: 3rem;
+    }
+
+    .article-body h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+      color: var(--gw-forest);
+      margin: 2.5rem 0 0.75rem;
+    }
+
+    .article-body p, .article-body ul {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--gw-text-muted);
+      margin: 0 0 1.25rem;
+    }
+
+    .article-body ul {
+      padding-left: 1.5rem;
+    }
+
+    .article-body li {
+      margin-bottom: 0.5rem;
+    }
+
+    .article-body strong {
+      color: var(--gw-forest);
+      font-weight: 600;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin: 1.5rem 0;
+    }
+
+    .comparison-table th, .comparison-table td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(26, 46, 26, 0.1);
+      color: var(--gw-text-muted);
+    }
+
+    .comparison-table th {
+      font-weight: 700;
+      color: var(--gw-forest);
+      background: rgba(26, 46, 26, 0.04);
+    }
+
+    .comparison-table td:first-child {
+      font-weight: 600;
+      color: var(--gw-forest);
+    }
+
+    .article-cta {
+      margin-top: 4rem;
+      padding: 2.5rem;
+      background: var(--gw-forest);
+      border-radius: 1rem;
+      text-align: center;
+    }
+
+    .article-cta h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.8rem;
+      color: #fff;
+      margin: 0 auto 0.75rem;
+    }
+
+    .article-cta p {
+      color: rgba(255,255,255,0.65);
+      margin: 0 0 1.5rem;
+    }
+
+    .btn-primary {
+      text-decoration: none;
+      background: var(--gw-rust);
+      color: #fff;
+      padding: 0.9rem 2rem;
+      border-radius: 100px;
+      font-size: 1rem;
+      font-weight: 600;
+      display: inline-block;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(196, 96, 58, 0.3);
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .article-wrap {
+        padding: 0 1.25rem;
+        margin-top: 5rem;
+      }
+
+      .comparison-table th, .comparison-table td {
+        padding: 0.5rem 0.6rem;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</Baselayout>

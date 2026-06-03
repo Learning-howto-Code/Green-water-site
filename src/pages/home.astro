@@ -9,7 +9,7 @@ const organizationSchema = {
   "name": "Greenwater",
   "url": "https://waterwz.com",
   "logo": "https://waterwz.com/favicon.svg",
-  "description": "AI-powered greywater reclamation systems that divert shower and sink water to your garden, saving up to 25,000 gallons per year.",
+  "description": "AI-powered gray water (greywater) reclamation systems that divert shower and sink water to your garden, saving up to 25,000 gallons per year.",
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
@@ -23,7 +23,15 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Can I trust a greywater recycling system?",
+      "name": "What is a gray water system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A gray water system (also spelled greywater system) diverts household wastewater from showers, sinks, and laundry — water that has been used but is not contaminated with sewage — and recycles it for garden irrigation or other non-potable uses. Greenwater's system uses AI-driven filtration to automate the diversion and cleaning process."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I trust a gray water recycling system?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Greenwater is engineered with safety as the first concern. Water passes through multiple filtration systems and is purified from microbial contaminants. Every system is built with redundancies and tested far beyond normal operating conditions."
@@ -31,7 +39,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      "name": "How much maintenance does a greywater system need?",
+      "name": "How much maintenance does a gray water system need?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Every component is engineered for tens of thousands of duty cycles. The system doesn't need any maintenance — ever."
@@ -39,30 +47,65 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      "name": "Is recycled greywater safe for garden use?",
+      "name": "Is recycled gray water safe for garden use?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Greywater has been proven safe for gardens, with no adverse effects compared to tap water. Our filtration exceeds regulatory requirements."
+        "text": "Yes. Gray water (greywater) has been proven safe for gardens, with no adverse effects compared to tap water. Our filtration exceeds regulatory requirements."
       }
     },
     {
       "@type": "Question",
-      "name": "How long does greywater system installation take?",
+      "name": "How long does gray water system installation take?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "A typical install takes less than a day. We connect to existing drain lines without modifying your plumbing stack — no permits required in most jurisdictions."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a gray water system cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Greenwater is currently available through a limited pilot program. Reach out to our team to learn about pilot pricing and availability in your area."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between gray water and black water?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gray water (or greywater) is wastewater from showers, bathroom sinks, and laundry — it does not contain sewage. Black water comes from toilets and contains human waste. Greenwater only diverts gray water lines; black water lines are never touched."
+      }
     }
   ]
 };
+
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Greenwater Gray Water Recycling System",
+  "description": "AI-powered gray water (greywater) reclamation system for homes. Diverts shower and sink water to your garden, saving up to 25,000 gallons per year with no full replumbing required.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Greenwater",
+    "url": "https://waterwz.com"
+  },
+  "areaServed": "US",
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/LimitedAvailability",
+    "description": "Limited pilot program spots available"
+  }
+};
 ---
 <Baselayout
-  title="Home Greywater Recycling System – Save 25,000 Gallons/Year"
-  description="Greenwater's AI-powered greywater reclamation system diverts shower and sink water to your garden — saving up to 50% of indoor water use with no full replumbing required."
+  title="Gray Water Recycling System for Home – Save 25,000 Gallons/Year"
+  description="Greenwater's AI-powered gray water (greywater) reclamation system diverts shower and sink water to your garden — saving up to 50% of indoor water use with no full replumbing required."
   canonical="https://waterwz.com/"
 >
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
 
 	<!-- HERO -->
 	<section class="hero">
@@ -71,10 +114,10 @@ const faqSchema = {
 			<div class="circle circle-2"></div>
 		</div>
 		<div class="hero-content">
-			<p class="eyebrow">Home greywater reclamation</p>
+			<p class="eyebrow">Home gray water reclamation</p>
 			<h1>Cut your water use in half.</h1>
 			<p class="lead">
-				Greenwater diverts shower and sink water back to your garden —
+				Greenwater's gray water system diverts shower and sink water back to your garden —
 				no full replumbing, no maintenance, no guilt. Just 25,000 gallons saved every year.
 			</p>
 			<div class="hero-actions">
@@ -92,7 +135,7 @@ const faqSchema = {
 			<div class="step">
 				<span class="step-num">01</span>
 				<h3>Intelligent Diversion</h3>
-				<p>Our valve pack reads source quality in real-time and diverts only reclaimable greywater. Blackwater lines stay untouched — reducing permitting friction to near zero.</p>
+				<p>Our valve pack reads source quality in real-time and diverts only reclaimable gray water (greywater) from showers and sinks. Black water lines stay untouched — reducing permitting friction to near zero.</p>
 			</div>
 			<div class="step">
 				<span class="step-num">02</span>
@@ -112,6 +155,15 @@ const faqSchema = {
 		<p class="eyebrow">FAQ</p>
 		<h2>Common questions</h2>
 		<div class="faq-list">
+			<div class="faq-item">
+				<button class="faq-btn" aria-expanded="false">
+					What is a gray water system?
+					<span class="faq-icon" aria-hidden="true">+</span>
+				</button>
+				<div class="faq-body">
+					<p>A gray water system (also spelled greywater system) diverts household wastewater from showers, sinks, and laundry — water that has been used but is not contaminated with sewage — and recycles it for garden irrigation. Greenwater automates this with AI-driven filtration, so every diverted drop meets quality standards before reaching your plants.</p>
+				</div>
+			</div>
 			<div class="faq-item">
 				<button class="faq-btn" aria-expanded="false">
 					Can I trust it?
@@ -136,7 +188,7 @@ const faqSchema = {
 					<span class="faq-icon" aria-hidden="true">+</span>
 				</button>
 				<div class="faq-body">
-					<p>Yes. Greywater has been proven safe for gardens, with no adverse effects compared to tap water. Our filtration exceeds regulatory requirements.</p>
+					<p>Yes. Gray water (greywater) has been proven safe for gardens, with no adverse effects compared to tap water. Our filtration exceeds regulatory requirements.</p>
 				</div>
 			</div>
 			<div class="faq-item">
@@ -146,6 +198,24 @@ const faqSchema = {
 				</button>
 				<div class="faq-body">
 					<p>A typical install takes less than a day. We connect to existing drain lines without modifying your plumbing stack — no permits required in most jurisdictions.</p>
+				</div>
+			</div>
+			<div class="faq-item">
+				<button class="faq-btn" aria-expanded="false">
+					How much does a gray water system cost?
+					<span class="faq-icon" aria-hidden="true">+</span>
+				</button>
+				<div class="faq-body">
+					<p>Greenwater is currently available through a limited pilot program. Reach out to our team to learn about pilot pricing and availability in your area.</p>
+				</div>
+			</div>
+			<div class="faq-item">
+				<button class="faq-btn" aria-expanded="false">
+					What's the difference between gray water and black water?
+					<span class="faq-icon" aria-hidden="true">+</span>
+				</button>
+				<div class="faq-body">
+					<p>Gray water (greywater) is wastewater from showers, bathroom sinks, and laundry — it does not contain sewage. Black water comes from toilets and contains human waste. Greenwater only diverts gray water lines; black water lines are never touched.</p>
 				</div>
 			</div>
 		</div>
@@ -230,7 +300,7 @@ const faqSchema = {
 
 		.hero-content h1 {
 			font-family: 'DM Serif Display', serif;
-			font-size: clamp(2.5rem, 6vw, 6.6rem);
+			font-size: clamp(2.2rem, 5vw, 5.6rem);
 			line-height: 1.05;
 			color: var(--gw-forest);
 			max-width: 16ch;
@@ -238,7 +308,7 @@ const faqSchema = {
 		}
 
 		.lead {
-			font-size: 1.2rem;
+			font-size: 1.05rem;
 			line-height: 1.65;
 			color: var(--gw-text-muted);
 			max-width: 48ch;
@@ -295,7 +365,7 @@ const faqSchema = {
 
 		.how-section h2 {
 			font-family: 'DM Serif Display', serif;
-			font-size: clamp(2rem, 3.5vw, 3rem);
+			font-size: clamp(1.75rem, 3vw, 2.6rem);
 			line-height: 1.1;
 			color: var(--gw-forest);
 			max-width: 20ch;
@@ -315,7 +385,7 @@ const faqSchema = {
 
 		.step-num {
 			font-family: 'DM Serif Display', serif;
-			font-size: 3rem;
+			font-size: 2.5rem;
 			color: rgba(26, 46, 26, 0.08);
 			line-height: 1;
 			display: block;
@@ -323,7 +393,7 @@ const faqSchema = {
 		}
 
 		.step h3 {
-			font-size: 1.15rem;
+			font-size: 1.05rem;
 			font-weight: 700;
 			margin: 0 0 0.75rem;
 			color: var(--gw-forest);
@@ -345,7 +415,7 @@ const faqSchema = {
 
 		.faq-section h2 {
 			font-family: 'DM Serif Display', serif;
-			font-size: clamp(1.8rem, 3vw, 2.5rem);
+			font-size: clamp(1.6rem, 2.5vw, 2.1rem);
 			line-height: 1.1;
 			color: var(--gw-forest);
 			margin: 0 0 3rem;
@@ -364,7 +434,7 @@ const faqSchema = {
 			justify-content: space-between;
 			align-items: center;
 			font-family: 'DM Sans', sans-serif;
-			font-size: 1.1rem;
+			font-size: 1rem;
 			font-weight: 600;
 			color: var(--gw-forest);
 			text-align: left;
@@ -373,7 +443,7 @@ const faqSchema = {
 
 		.faq-icon {
 			transition: transform 0.3s ease;
-			font-size: 1.4rem;
+			font-size: 1.25rem;
 			font-weight: 300;
 			color: var(--gw-rust);
 			flex-shrink: 0;
@@ -432,7 +502,7 @@ const faqSchema = {
 
 		.cta-content h2 {
 			font-family: 'DM Serif Display', serif;
-			font-size: clamp(2rem, 4vw, 3.2rem);
+			font-size: clamp(1.75rem, 3.5vw, 2.8rem);
 			line-height: 1.1;
 			color: #fff;
 			max-width: 18ch;
@@ -441,7 +511,7 @@ const faqSchema = {
 
 		.cta-content p {
 			color: rgba(255, 255, 255, 0.6);
-			font-size: 1.1rem;
+			font-size: 1rem;
 			margin: 0 0 2rem;
 		}
 

@@ -1,0 +1,232 @@
+---
+import Baselayout from '../../layouts/base.astro';
+
+const baseUrl = import.meta.env.BASE_URL;
+
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How Gray Water System Installation Works",
+  "description": "A step-by-step overview of how a gray water recycling system gets installed in a home — what happens on install day, what you need to prepare, and what changes afterward.",
+  "step": [
+    { "@type": "HowToStep", "name": "Pre-install assessment", "text": "A Greenwater technician reviews your existing drain line layout and garden irrigation setup to determine the optimal valve placement and filtration unit location." },
+    { "@type": "HowToStep", "name": "Valve pack installation", "text": "The gray water diversion valves are installed on your shower and sink drain lines. This does not require cutting into walls — the connection is made at accessible drain access points." },
+    { "@type": "HowToStep", "name": "Filtration unit setup", "text": "The three-stage filtration unit is installed, typically in a utility room, garage, or crawlspace. The unit connects to the diversion valves and to your garden irrigation lines." },
+    { "@type": "HowToStep", "name": "System commissioning", "text": "The system runs through calibration cycles. The AI establishes baseline sensor readings and quality thresholds for your specific water profile. You receive access to the live monitoring dashboard." }
+  ]
+};
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Gray Water System Installation: What to Expect",
+  "description": "A step-by-step look at how a gray water system gets installed — what happens on install day, what you need to prepare, and how your home changes afterward.",
+  "author": { "@type": "Organization", "name": "Greenwater" },
+  "publisher": { "@type": "Organization", "name": "Greenwater", "url": "https://waterwz.com" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://waterwz.com/resources/gray-water-system-installation/" }
+};
+---
+<Baselayout
+  title="Gray Water System Installation: What to Expect"
+  description="A step-by-step look at how a gray water system gets installed — what happens on install day, what you need to prepare, and how your home changes afterward."
+  canonical="https://waterwz.com/resources/gray-water-system-installation/"
+>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(howToSchema)} />
+
+  <article class="article-wrap">
+    <header class="article-header">
+      <a class="back-link" href={`${baseUrl}resources/`}>← Resources</a>
+      <p class="eyebrow">Gray Water Guide</p>
+      <h1>Gray Water System Installation: What to Expect</h1>
+      <p class="article-lead">A gray water system install is far simpler than most homeowners expect. Greenwater completes a full installation in under a day — no full replumbing, no wall demolition, no permits required in most states.</p>
+    </header>
+
+    <div class="article-body">
+      <h2>Before install day</h2>
+      <p>The process starts with a brief pre-install consultation. A Greenwater technician reviews your home's drain line layout — typically using photos or a short video walkthrough — to determine the best valve placement locations and where the filtration unit will sit. Most homes are straightforward; the consultation takes 20–30 minutes.</p>
+      <p>You'll also discuss your garden irrigation setup during the consultation. The filtration unit output connects to either an existing drip irrigation system or a new distribution line we run to your garden. Knowing your garden layout in advance helps the technician plan the most efficient routing on install day.</p>
+
+      <h2>What happens on install day</h2>
+      <p>A Greenwater installation follows four stages:</p>
+
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">01</span>
+          <h3>Drain line assessment</h3>
+          <p>The technician locates accessible drain points for your shower and bathroom sink lines — typically at the drain stack or accessible clean-out points. No wall cutting is required in the vast majority of installations.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <h3>Valve pack installation</h3>
+          <p>Diversion valves are installed on the gray water drain lines. These valves route water to the filtration unit when quality sensors detect reclaimable gray water, and pass water to the normal sewer line when it doesn't qualify — such as during the first few seconds of a cold shower.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <h3>Filtration unit installation</h3>
+          <p>The three-stage filtration unit — roughly the size of a large water softener — is installed in your utility room, garage, or crawlspace. It connects to the diversion valves and to your garden irrigation lines or a dedicated outdoor distribution point.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">04</span>
+          <h3>Commissioning and calibration</h3>
+          <p>The system runs through calibration cycles. The AI establishes baseline sensor readings for your specific water chemistry and usage patterns. You receive access to the Greenwater monitoring dashboard, which shows live water quality, diversion volumes, and cumulative savings.</p>
+        </div>
+      </div>
+
+      <h2>Does installation require permits?</h2>
+      <p>In most US states, Greenwater's installation method does not require permits. The system connects to existing drain lines at accessible points without modifying your plumbing stack, which keeps it out of the permit-required category under most local plumbing codes. States with specific gray water codes — California, Arizona, Texas, New Mexico, and others — explicitly permit this type of connection without a permit for residential systems under a certain daily volume threshold.</p>
+      <p>We verify permit requirements for your specific address and jurisdiction before every installation and handle any required filings if your jurisdiction does require them.</p>
+
+      <h2>What changes in your home after installation?</h2>
+      <p>From a day-to-day perspective, nothing changes in how you use your home. Your showers, sinks, and toilets work exactly as before. The only visible change is the filtration unit in your utility area and the garden distribution line to your yard.</p>
+      <p>What does change is your water bill. Households in our pilot program report a 30–50% reduction in outdoor water use — the category that typically makes up the largest portion of residential water bills during spring and summer months.</p>
+
+      <h2>How long does it take for the system to start saving water?</h2>
+      <p>The system begins diverting and recycling gray water on the same day as installation. Savings are immediate — every shower you take from day one produces water that goes to your garden rather than the sewer.</p>
+    </div>
+
+    <div class="article-cta">
+      <h2>Get a gray water system installed in your home</h2>
+      <p>Join the Greenwater pilot program — limited spots available.</p>
+      <a href={`${baseUrl}contact/`} class="btn-primary">Talk To The Team</a>
+    </div>
+  </article>
+
+  <style>
+    .article-wrap {
+      max-width: 760px;
+      margin: 6rem auto 4rem;
+      padding: 0 2.5rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--gw-rust);
+      text-decoration: none;
+      margin-bottom: 2rem;
+    }
+
+    .eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gw-rust);
+      font-weight: 700;
+      margin: 0 0 1rem;
+    }
+
+    .article-header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      color: var(--gw-forest);
+      margin: 0 0 1.5rem;
+    }
+
+    .article-lead {
+      font-size: 1.15rem;
+      line-height: 1.65;
+      color: var(--gw-text-muted);
+      margin: 0 0 3rem;
+      border-bottom: 1px solid rgba(26, 46, 26, 0.1);
+      padding-bottom: 3rem;
+    }
+
+    .article-body h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+      color: var(--gw-forest);
+      margin: 2.5rem 0 0.75rem;
+    }
+
+    .article-body p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--gw-text-muted);
+      margin: 0 0 1.25rem;
+    }
+
+    .steps {
+      display: grid;
+      gap: 1.5rem;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .step {
+      padding: 1.5rem;
+      border: 1px solid rgba(26, 46, 26, 0.1);
+      border-radius: 0.75rem;
+      background: color-mix(in srgb, var(--gw-cream) 60%, white);
+    }
+
+    .step-num {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2rem;
+      color: rgba(26, 46, 26, 0.12);
+      display: block;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .step h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--gw-forest);
+      margin: 0 0 0.5rem;
+    }
+
+    .step p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--gw-text-muted);
+      margin: 0;
+    }
+
+    .article-cta {
+      margin-top: 4rem;
+      padding: 2.5rem;
+      background: var(--gw-forest);
+      border-radius: 1rem;
+      text-align: center;
+    }
+
+    .article-cta h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.8rem;
+      color: #fff;
+      margin: 0 auto 0.75rem;
+    }
+
+    .article-cta p {
+      color: rgba(255,255,255,0.65);
+      margin: 0 0 1.5rem;
+    }
+
+    .btn-primary {
+      text-decoration: none;
+      background: var(--gw-rust);
+      color: #fff;
+      padding: 0.9rem 2rem;
+      border-radius: 100px;
+      font-size: 1rem;
+      font-weight: 600;
+      display: inline-block;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(196, 96, 58, 0.3);
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .article-wrap {
+        padding: 0 1.25rem;
+        margin-top: 5rem;
+      }
+    }
+  </style>
+</Baselayout>

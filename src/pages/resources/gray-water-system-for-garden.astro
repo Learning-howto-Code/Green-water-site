@@ -1,0 +1,188 @@
+---
+import Baselayout from '../../layouts/base.astro';
+
+const baseUrl = import.meta.env.BASE_URL;
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Using Gray Water for Garden Irrigation: Is It Safe?",
+  "description": "Properly filtered gray water is safe for garden irrigation and can replace up to 25,000 gallons of tap water per year. Learn what's safe to water, what to avoid, and how filtration works.",
+  "author": { "@type": "Organization", "name": "Greenwater" },
+  "publisher": { "@type": "Organization", "name": "Greenwater", "url": "https://waterwz.com" },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://waterwz.com/resources/gray-water-system-for-garden/" }
+};
+---
+<Baselayout
+  title="Using Gray Water for Garden Irrigation: Is It Safe?"
+  description="Properly filtered gray water is safe for garden irrigation and can replace up to 25,000 gallons of tap water per year. Learn what's safe to water, what to avoid, and how filtration works."
+  canonical="https://waterwz.com/resources/gray-water-system-for-garden/"
+>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+
+  <article class="article-wrap">
+    <header class="article-header">
+      <a class="back-link" href={`${baseUrl}resources/`}>← Resources</a>
+      <p class="eyebrow">Gray Water Guide</p>
+      <h1>Using Gray Water for Garden Irrigation: Is It Safe?</h1>
+      <p class="article-lead">The short answer is yes — with the right filtration. Here's what the science says about gray water for gardens, what you can and can't water, and how modern systems make it effortless.</p>
+    </header>
+
+    <div class="article-body">
+      <h2>Is gray water safe for gardens?</h2>
+      <p>Research consistently shows that filtered gray water from showers and sinks is safe for garden irrigation. Studies comparing plants irrigated with filtered gray water versus tap water show no statistically significant difference in plant health, soil quality, or pathogen levels. Multiple US states — including California, Arizona, New Mexico, and Texas — have codified this finding into law, permitting household gray water reuse for outdoor irrigation.</p>
+      <p>The key word is filtered. Unfiltered gray water can contain bacteria, soap residue, and trace pathogens. A proper gray water recycling system addresses this through staged filtration — removing solids, neutralizing bacteria, and delivering water that is clean and consistent.</p>
+
+      <h2>What can you water with gray water?</h2>
+      <p>With properly filtered gray water, you can safely irrigate:</p>
+      <ul>
+        <li>Lawn and turf grass</li>
+        <li>Ornamental plants, shrubs, and hedges</li>
+        <li>Fruit trees (applying water at the root zone, not on fruit)</li>
+        <li>Vegetable gardens (subsurface or drip irrigation — avoid direct contact with edible parts)</li>
+        <li>Flower beds and mulched areas</li>
+      </ul>
+
+      <h2>What should you avoid?</h2>
+      <p>Most gray water guidelines recommend against applying gray water directly to leaf surfaces of vegetables that are eaten raw — lettuce, spinach, herbs — especially via sprinkler. Drip or subsurface irrigation sidesteps this entirely by delivering water directly to the root zone with no surface contact.</p>
+      <p>Greenwater's system uses subsurface-compatible irrigation output by default, which keeps water where it benefits plants most and eliminates surface-contact concerns for virtually all applications.</p>
+
+      <h2>How does gray water filtration work?</h2>
+      <p>A three-stage filtration approach is standard in quality gray water systems:</p>
+      <ul>
+        <li><strong>Stage 1 — Physical filtration:</strong> Removes hair, lint, and large particles from incoming gray water before it enters the treatment system.</li>
+        <li><strong>Stage 2 — Biological/chemical treatment:</strong> Reduces bacteria, soap compounds, and fine particulates. Some systems use UV treatment at this stage.</li>
+        <li><strong>Stage 3 — Quality verification:</strong> Sensors confirm the water meets quality thresholds before it's released to irrigation lines. If a batch doesn't pass, it gets diverted to the sewer rather than the garden.</li>
+      </ul>
+      <p>Greenwater's system adds continuous AI-driven monitoring across all three stages. Sensor readings update in real-time and the system adjusts filtration parameters automatically — meaning your garden gets consistently clean water without any manual oversight.</p>
+
+      <h2>How much garden water can a gray water system provide?</h2>
+      <p>The average household produces 30–50 gallons of gray water per day from showers and bathroom sinks. For a family of four, that's 120–200 gallons per day — enough to sustain a substantial garden through dry months without drawing from municipal water. Annually, this translates to between 10,000 and 25,000 gallons of recycled water available for your garden.</p>
+      <p>In drought-prone regions or during water restrictions, this can be the difference between a thriving garden and mandatory watering cutbacks.</p>
+
+      <h2>Does gray water change soil quality over time?</h2>
+      <p>Long-term gray water irrigation studies show minimal impact on soil when systems include proper filtration. Sodium from soaps is the most common concern with untreated gray water — but properly filtered systems remove this before the water reaches your garden. Greenwater's filtration exceeds regulatory standards for sodium content, keeping your soil healthy over years of use.</p>
+    </div>
+
+    <div class="article-cta">
+      <h2>Start recycling gray water for your garden</h2>
+      <p>Join the Greenwater pilot program and have a system installed in under a day.</p>
+      <a href={`${baseUrl}contact/`} class="btn-primary">Talk To The Team</a>
+    </div>
+  </article>
+
+  <style>
+    .article-wrap {
+      max-width: 760px;
+      margin: 6rem auto 4rem;
+      padding: 0 2.5rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--gw-rust);
+      text-decoration: none;
+      margin-bottom: 2rem;
+    }
+
+    .eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gw-rust);
+      font-weight: 700;
+      margin: 0 0 1rem;
+    }
+
+    .article-header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      color: var(--gw-forest);
+      margin: 0 0 1.5rem;
+    }
+
+    .article-lead {
+      font-size: 1.15rem;
+      line-height: 1.65;
+      color: var(--gw-text-muted);
+      margin: 0 0 3rem;
+      border-bottom: 1px solid rgba(26, 46, 26, 0.1);
+      padding-bottom: 3rem;
+    }
+
+    .article-body h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.5rem;
+      color: var(--gw-forest);
+      margin: 2.5rem 0 0.75rem;
+    }
+
+    .article-body p, .article-body ul {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--gw-text-muted);
+      margin: 0 0 1.25rem;
+    }
+
+    .article-body ul {
+      padding-left: 1.5rem;
+    }
+
+    .article-body li {
+      margin-bottom: 0.5rem;
+    }
+
+    .article-body strong {
+      color: var(--gw-forest);
+      font-weight: 600;
+    }
+
+    .article-cta {
+      margin-top: 4rem;
+      padding: 2.5rem;
+      background: var(--gw-forest);
+      border-radius: 1rem;
+      text-align: center;
+    }
+
+    .article-cta h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.8rem;
+      color: #fff;
+      margin: 0 auto 0.75rem;
+    }
+
+    .article-cta p {
+      color: rgba(255,255,255,0.65);
+      margin: 0 0 1.5rem;
+    }
+
+    .btn-primary {
+      text-decoration: none;
+      background: var(--gw-rust);
+      color: #fff;
+      padding: 0.9rem 2rem;
+      border-radius: 100px;
+      font-size: 1rem;
+      font-weight: 600;
+      display: inline-block;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(196, 96, 58, 0.3);
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .article-wrap {
+        padding: 0 1.25rem;
+        margin-top: 5rem;
+      }
+    }
+  </style>
+</Baselayout>
