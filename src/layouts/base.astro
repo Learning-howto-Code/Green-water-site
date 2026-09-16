@@ -14,7 +14,7 @@ const {
   title,
   description = "Greenwater's AI-powered gray water (greywater) reclamation system diverts shower and sink water to your garden — saving up to 50% of indoor water use with no full replumbing required.",
   canonical,
-  ogImage = "https://waterwz.com/images/greenwater-og-image.svg",
+  ogImage = "https://waterwz.com/images/greenwater-og-image.png",
   ogType = "website",
   noindex = false,
 } = Astro.props;
@@ -38,12 +38,14 @@ const canonicalUrl = canonical || `${siteUrl}${Astro.url.pathname}`;
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
     <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
-    <meta name="keywords" content="gray water system, graywater recycling, greywater system, home gray water recycling, gray water for garden, greywater reclamation, water recycling system" />
 
     <!-- Open Graph -->
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content="Greenwater" />

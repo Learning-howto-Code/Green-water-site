@@ -10,8 +10,20 @@ const articleSchema = {
   "description": "Properly filtered gray water is safe for garden irrigation and can replace up to 25,000 gallons of tap water per year. Learn what's safe to water, what to avoid, and how filtration works.",
   "author": { "@type": "Organization", "name": "Greenwater" },
   "publisher": { "@type": "Organization", "name": "Greenwater", "url": "https://waterwz.com" },
+  "datePublished": "2026-06-03",
+  "dateModified": "2026-06-03",
   "mainEntityOfPage": { "@type": "WebPage", "@id": "https://waterwz.com/resources/gray-water-system-for-garden/" }
 };
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://waterwz.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://waterwz.com/resources/" },
+    { "@type": "ListItem", "position": 3, "name": "Using Gray Water for Garden Irrigation: Is It Safe?", "item": "https://waterwz.com/resources/gray-water-system-for-garden/" }
+  ]
+};
+
 ---
 <Baselayout
   title="Using Gray Water for Garden Irrigation: Is It Safe?"
@@ -19,11 +31,13 @@ const articleSchema = {
   canonical="https://waterwz.com/resources/gray-water-system-for-garden/"
 >
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 
   <article class="article-wrap">
     <header class="article-header">
       <a class="back-link" href={`${baseUrl}resources/`}>← Resources</a>
       <p class="eyebrow">Gray Water Guide</p>
+      <p class="article-date">Published <time datetime="2026-06-03">June 3, 2026</time></p>
       <h1>Using Gray Water for Garden Irrigation: Is It Safe?</h1>
       <p class="article-lead">The short answer is yes — with the right filtration. Here's what the science says about gray water for gardens, what you can and can't water, and how modern systems make it effortless.</p>
     </header>
@@ -183,6 +197,12 @@ const articleSchema = {
         padding: 0 1.25rem;
         margin-top: 5rem;
       }
+    }
+
+    .article-date {
+      margin: 0.15rem 0 0;
+      font-size: 0.8rem;
+      color: var(--gw-text-muted);
     }
   </style>
 </Baselayout>

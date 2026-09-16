@@ -10,8 +10,20 @@ const articleSchema = {
   "description": "Gray water systems and rainwater harvesting both reduce household water consumption, but they work differently. Compare the two approaches by cost, output, reliability, and installation complexity.",
   "author": { "@type": "Organization", "name": "Greenwater" },
   "publisher": { "@type": "Organization", "name": "Greenwater", "url": "https://waterwz.com" },
+  "datePublished": "2026-06-03",
+  "dateModified": "2026-06-03",
   "mainEntityOfPage": { "@type": "WebPage", "@id": "https://waterwz.com/resources/gray-water-vs-rainwater-harvesting/" }
 };
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://waterwz.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://waterwz.com/resources/" },
+    { "@type": "ListItem", "position": 3, "name": "Gray Water vs. Rainwater Harvesting: Which Saves More?", "item": "https://waterwz.com/resources/gray-water-vs-rainwater-harvesting/" }
+  ]
+};
+
 ---
 <Baselayout
   title="Gray Water vs. Rainwater Harvesting: Which Saves More?"
@@ -19,11 +31,13 @@ const articleSchema = {
   canonical="https://waterwz.com/resources/gray-water-vs-rainwater-harvesting/"
 >
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 
   <article class="article-wrap">
     <header class="article-header">
       <a class="back-link" href={`${baseUrl}resources/`}>← Resources</a>
       <p class="eyebrow">Gray Water Guide</p>
+      <p class="article-date">Published <time datetime="2026-06-03">June 3, 2026</time></p>
       <h1>Gray Water vs. Rainwater Harvesting: Which Saves More?</h1>
       <p class="article-lead">Both approaches cut your reliance on municipal water, but they serve different climates, budgets, and use cases. Here's a direct comparison to help you decide — or combine both.</p>
     </header>
@@ -219,6 +233,12 @@ const articleSchema = {
         padding: 0.5rem 0.6rem;
         font-size: 0.8rem;
       }
+    }
+
+    .article-date {
+      margin: 0.15rem 0 0;
+      font-size: 0.8rem;
+      color: var(--gw-text-muted);
     }
   </style>
 </Baselayout>
