@@ -25,12 +25,22 @@ const articles = [
     desc: "A step-by-step overview of how a gray water system gets installed — what happens on the day, what you need to prepare, and what changes afterward.",
   },
 ];
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://waterwz.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://waterwz.com/resources/" }
+  ]
+};
 ---
 <Baselayout
   title="Gray Water Resources – Guides & Articles"
   description="Learn everything about gray water systems — how they work, safety, installation, and how they compare to other home water recycling options."
   canonical="https://waterwz.com/resources/"
 >
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   <section class="resources-hero">
     <p class="eyebrow">Gray Water Resources</p>
     <h1>Learn about gray water recycling</h1>
